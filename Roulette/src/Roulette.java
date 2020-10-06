@@ -83,6 +83,23 @@ public class Roulette {
 	               }
 
 	           }
+	         //Ask for another game
+	           for (int totals=1; totals<36; totals++) {
+	        		if( resultArr[totals] > 0 ) {
+	        			System.out.println("The number " + totals + " won " + resultArr[totals] + " times.");
+	        		}
+	        	}
+	           	           
+	           System.out.println("You have R" + total + " remaining." );
+	           System.out.println("You have won " + win + " games.");
+	           System.out.println("You have lost " + lose + " games.");
+	           System.out.println("The wheel has been spun " + spin + " times.");          
+	           System.out.print("\nWould you like to play another game? (y/n) ");
+	           response = input.next().charAt(0);
+	           
+	           
+	       }
+
 	       
 
 	}
