@@ -57,6 +57,32 @@ public class Roulette {
 	               else
 	                   result = 1;
 	           }
+	           //Print out game result, win/lose amount
+	           if (result > 0)
+	           {
+	               System.out.println("Congratulatons!!!" + player + " " +  "You win!");
+	               System.out.printf("You have won R%.2f \n", result * amount);
+	               System.out.printf("Here's your money back: R%.2f \n",
+	                       (result + 1) * amount);
+	               total = (result + 1) * amount + total;
+	               win ++;
+	               resultArr[rouletteNumber]++;
+	               
+	           }
+	           else
+	           {
+	               System.out.println("Sorry" + " " + player + " " + "You lose. Better luck next time!");
+	               System.out.printf("You have lost R%.2f \n",
+	                       (result + 1) * amount);
+	               total = total - (result + 1) * (amount);
+	               lose ++;
+	               resultArr[rouletteNumber]++;
+	               
+	               if (total <= 0) {
+	            	   break;
+	               }
+
+	           }
 	       
 
 	}
